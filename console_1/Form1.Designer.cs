@@ -36,15 +36,18 @@
             this.msgClear_btn = new System.Windows.Forms.Button();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.position_gpbox = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.reset_btn = new System.Windows.Forms.Button();
+            this.poscode_txt = new System.Windows.Forms.TextBox();
+            this.groupcode_txt = new System.Windows.Forms.TextBox();
+            this.countrycode_txt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pos_leu = new System.Windows.Forms.RadioButton();
             this.pos_balise = new System.Windows.Forms.RadioButton();
             this.msgbox = new System.Windows.Forms.RichTextBox();
+            this.posread_btn = new System.Windows.Forms.Button();
+            this.poswrite_btn = new System.Windows.Forms.Button();
             this.manufacturer_gpbox.SuspendLayout();
             this.position_gpbox.SuspendLayout();
             this.SuspendLayout();
@@ -123,9 +126,12 @@
             // 
             // position_gpbox
             // 
-            this.position_gpbox.Controls.Add(this.textBox3);
-            this.position_gpbox.Controls.Add(this.textBox2);
-            this.position_gpbox.Controls.Add(this.textBox1);
+            this.position_gpbox.Controls.Add(this.poswrite_btn);
+            this.position_gpbox.Controls.Add(this.posread_btn);
+            this.position_gpbox.Controls.Add(this.reset_btn);
+            this.position_gpbox.Controls.Add(this.poscode_txt);
+            this.position_gpbox.Controls.Add(this.groupcode_txt);
+            this.position_gpbox.Controls.Add(this.countrycode_txt);
             this.position_gpbox.Controls.Add(this.label3);
             this.position_gpbox.Controls.Add(this.label2);
             this.position_gpbox.Controls.Add(this.label1);
@@ -133,31 +139,44 @@
             this.position_gpbox.Controls.Add(this.pos_balise);
             this.position_gpbox.Location = new System.Drawing.Point(117, 12);
             this.position_gpbox.Name = "position_gpbox";
-            this.position_gpbox.Size = new System.Drawing.Size(502, 122);
+            this.position_gpbox.Size = new System.Drawing.Size(290, 122);
             this.position_gpbox.TabIndex = 10;
             this.position_gpbox.TabStop = false;
             this.position_gpbox.Text = "Position Information";
             // 
-            // textBox3
+            // reset_btn
             // 
-            this.textBox3.Location = new System.Drawing.Point(150, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(37, 20);
-            this.textBox3.TabIndex = 7;
+            this.reset_btn.Location = new System.Drawing.Point(80, 89);
+            this.reset_btn.Name = "reset_btn";
+            this.reset_btn.Size = new System.Drawing.Size(107, 22);
+            this.reset_btn.TabIndex = 8;
+            this.reset_btn.Text = "Reset";
+            this.reset_btn.UseVisualStyleBackColor = true;
+            this.reset_btn.Click += new System.EventHandler(this.reset_btn_Click);
             // 
-            // textBox2
+            // poscode_txt
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 41);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(37, 20);
-            this.textBox2.TabIndex = 6;
+            this.poscode_txt.Location = new System.Drawing.Point(150, 63);
+            this.poscode_txt.Name = "poscode_txt";
+            this.poscode_txt.Size = new System.Drawing.Size(37, 20);
+            this.poscode_txt.TabIndex = 7;
+            this.poscode_txt.Text = "XXX";
             // 
-            // textBox1
+            // groupcode_txt
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 18);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 5;
+            this.groupcode_txt.Location = new System.Drawing.Point(150, 41);
+            this.groupcode_txt.Name = "groupcode_txt";
+            this.groupcode_txt.Size = new System.Drawing.Size(37, 20);
+            this.groupcode_txt.TabIndex = 6;
+            this.groupcode_txt.Text = "XXX";
+            // 
+            // countrycode_txt
+            // 
+            this.countrycode_txt.Location = new System.Drawing.Point(150, 18);
+            this.countrycode_txt.Name = "countrycode_txt";
+            this.countrycode_txt.Size = new System.Drawing.Size(37, 20);
+            this.countrycode_txt.TabIndex = 5;
+            this.countrycode_txt.Text = "XXX";
             // 
             // label3
             // 
@@ -195,6 +214,7 @@
             this.pos_leu.TabIndex = 1;
             this.pos_leu.Text = "LEU";
             this.pos_leu.UseVisualStyleBackColor = true;
+            this.pos_leu.CheckedChanged += new System.EventHandler(this.pos_leu_CheckedChanged);
             // 
             // pos_balise
             // 
@@ -207,6 +227,7 @@
             this.pos_balise.TabStop = true;
             this.pos_balise.Text = "Balise";
             this.pos_balise.UseVisualStyleBackColor = true;
+            this.pos_balise.CheckedChanged += new System.EventHandler(this.pos_balise_CheckedChanged);
             // 
             // msgbox
             // 
@@ -215,6 +236,25 @@
             this.msgbox.Size = new System.Drawing.Size(435, 173);
             this.msgbox.TabIndex = 11;
             this.msgbox.Text = "";
+            // 
+            // posread_btn
+            // 
+            this.posread_btn.Location = new System.Drawing.Point(203, 59);
+            this.posread_btn.Name = "posread_btn";
+            this.posread_btn.Size = new System.Drawing.Size(75, 23);
+            this.posread_btn.TabIndex = 9;
+            this.posread_btn.Text = "Read";
+            this.posread_btn.UseVisualStyleBackColor = true;
+            this.posread_btn.Click += new System.EventHandler(this.posread_btn_Click);
+            // 
+            // poswrite_btn
+            // 
+            this.poswrite_btn.Location = new System.Drawing.Point(203, 88);
+            this.poswrite_btn.Name = "poswrite_btn";
+            this.poswrite_btn.Size = new System.Drawing.Size(75, 23);
+            this.poswrite_btn.TabIndex = 10;
+            this.poswrite_btn.Text = "Write";
+            this.poswrite_btn.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -253,12 +293,15 @@
         private System.Windows.Forms.RichTextBox msgbox;
         private System.Windows.Forms.RadioButton pos_leu;
         private System.Windows.Forms.RadioButton pos_balise;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox poscode_txt;
+        private System.Windows.Forms.TextBox groupcode_txt;
+        private System.Windows.Forms.TextBox countrycode_txt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button reset_btn;
+        private System.Windows.Forms.Button poswrite_btn;
+        private System.Windows.Forms.Button posread_btn;
 
     }
 }

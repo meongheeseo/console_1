@@ -5,3 +5,4 @@
 \\campus.mcgill.ca\EMF\SWE\mseo1\My Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.exe
 \\campus.mcgill.ca\EMF\SWE\mseo1\My Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.pdb
 \\campus.mcgill.ca\EMF\SWE\mseo1\My Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.Form1.resources
+\\campus.mcgill.ca\EMF\SWE\mseo1\My Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.csprojResolveAssemblyReference.cache

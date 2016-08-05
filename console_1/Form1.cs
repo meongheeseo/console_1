@@ -39,6 +39,33 @@ namespace console_1
         {
             position_gpbox.Visible = false;
         }
+
+        private void reset_btn_Click(object sender, EventArgs e)
+        {
+            countrycode_txt.Text = String.Empty;
+            groupcode_txt.Text = String.Empty;
+            poscode_txt.Text = String.Empty;
+        }
+
+        Boolean balise_checked = true;
+
+        private void pos_balise_CheckedChanged(object sender, EventArgs e)
+        {
+            balise_checked = true;
+        }
+
+        private void pos_leu_CheckedChanged(object sender, EventArgs e)
+        {
+            balise_checked = false;
+        }
+
+        private void posread_btn_Click(object sender, EventArgs e)
+        {
+            if (balise_checked)
+                MessageBox.Show("Balise");
+            else
+                MessageBox.Show("LEU");
+        }
     }
 
     public static class RichTextBoxExtensions
