@@ -18,6 +18,7 @@ namespace console_1
             //msgbox.AppendText("HI\n");
             //msgbox.AppendText("Hello", Color.Green);
             position_gpbox.Visible = false;
+            telegram_gpbox.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,30 +26,35 @@ namespace console_1
 
         }
         
+        //
+        //  Manufacturer Group
+        // 
+        //      Only show Position and Telegram menu when Bombardier is selected.
+        //
         private void manu_bombardier_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = true;
+            telegram_gpbox.Visible = true;
         }
 
         private void manu_siemens_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = false;
+            telegram_gpbox.Visible = false;
         }
 
         private void manu_shinwoo_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = false;
+            telegram_gpbox.Visible = false;
         }
 
-        private void reset_btn_Click(object sender, EventArgs e)
-        {
-            countrycode_txt.Text = String.Empty;
-            groupcode_txt.Text = String.Empty;
-            poscode_txt.Text = String.Empty;
-        }
-
+        //
+        //  Position Group
+        //
         Boolean balise_checked = true;
 
+        //-----------  Checks if Balise is selected
         private void pos_balise_CheckedChanged(object sender, EventArgs e)
         {
             balise_checked = true;
@@ -59,12 +65,41 @@ namespace console_1
             balise_checked = false;
         }
 
+        //-----------  Read, Write, Reset button control
         private void posread_btn_Click(object sender, EventArgs e)
         {
             if (balise_checked)
-                MessageBox.Show("Balise");
+            {
+                MessageBox.Show("Connect Balise Cable", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
             else
-                MessageBox.Show("LEU");
+            {
+                MessageBox.Show("Connect LEU Cable", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void poswrite_btn_Click(object sender, EventArgs e)
+        {
+            if (balise_checked)
+            {
+                MessageBox.Show("Connect Balise Cable", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Connect LEU Cable and Check the LEU Power", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void reset_btn_Click(object sender, EventArgs e)
+        {
+            countrycode_txt.Text = String.Empty;
+            groupcode_txt.Text = String.Empty;
+            poscode_txt.Text = String.Empty;
+        }
+
+        private void telegram_gpbox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 
