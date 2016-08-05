@@ -15,10 +15,9 @@ namespace console_1
         {
             InitializeComponent();
 
-            //msgbox.AppendText("HI\n");
-            //msgbox.AppendText("Hello", Color.Green);
+            msgbox.AppendText("HI\n");
+            msgbox.AppendText("Hello", Color.Green);
             position_gpbox.Visible = false;
-            telegram_gpbox.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -34,19 +33,17 @@ namespace console_1
         private void manu_bombardier_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = true;
-            telegram_gpbox.Visible = true;
         }
 
         private void manu_siemens_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = false;
-            telegram_gpbox.Visible = false;
+            pos_leu.Visible = false;
         }
 
         private void manu_shinwoo_CheckedChanged(object sender, EventArgs e)
         {
             position_gpbox.Visible = false;
-            telegram_gpbox.Visible = false;
         }
 
         //
@@ -100,6 +97,15 @@ namespace console_1
         private void telegram_gpbox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void msgClear_btn_Click(object sender, EventArgs e)
+        {
+            msgbox.Clear();
+        }
+
+        private void msgSave_btn_Click(object sender, EventArgs e)
+        {
         }
     }
 
