@@ -14,3 +14,11 @@ C:\Users\john\Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\
 C:\Users\john\Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.Form1.resources
 C:\Users\john\Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.Properties.Resources.resources
 C:\Users\john\Documents\Visual Studio 2010\Projects\console_1\console_1\obj\x86\Debug\console_1.csproj.GenerateResource.Cache
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.exe
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.pdb
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\bin\Debug\console_1.exe
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\bin\Debug\console_1.pdb
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.csprojResolveAssemblyReference.cache
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.Form1.resources
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.Properties.Resources.resources
+C:\Users\john\Desktop\mhSeo\Projects\console_1\console_1\obj\x86\Debug\console_1.csproj.GenerateResource.Cache

@@ -15,8 +15,8 @@ namespace console_1
         {
             InitializeComponent();
 
-            msgbox.AppendText("HI\n");
-            msgbox.AppendText("Hello", Color.Green);
+            //msgbox.AppendText("HI\n");
+            //msgbox.AppendText("Hello", Color.Green);
             position_gpbox.Visible = false;
         }
 
@@ -106,6 +106,18 @@ namespace console_1
 
         private void msgSave_btn_Click(object sender, EventArgs e)
         {
+            SaveFileDialog saveFile = new SaveFileDialog();
+
+            // if you don't need to keep the color of the text, use *.txt instead.
+            saveFile.Filter = "Rich Text Format (*.rtf)|*.rtf"; 
+            saveFile.DefaultExt = "rtf";
+            saveFile.AddExtension = true;
+
+            if (saveFile.ShowDialog() == System.Windows.Forms.DialogResult.OK && saveFile.FileName.Length > 0)
+            {
+                // if you don't need to keep the color of the text, use RichTextBoxStreamType.PlainText
+                msgbox.SaveFile(saveFile.FileName, RichTextBoxStreamType.RichText);
+            }
         }
     }
 
